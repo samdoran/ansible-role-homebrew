@@ -1,0 +1,22 @@
+---
+homebrew_taps:
+  - caskroom/cask
+
+homebrew_packages:
+  - fish
+  - htop
+  - coreutils
+  - iperf
+  - nmap
+  - ssh-copy-id
+  - tmux
+  - watch
+  - wget
+  - git
+
+homebrew_cask_apps:
+  - google-chrome
+
+homebrew_cask_appdir: "~/Applications"
+
+homebrew_caskroom: "/opt/homebrew-cask/Caskroom"

@@ -1,0 +1,23 @@
+---
+homebrew_packages:
+  - fish
+  - htop
+  - coreutils
+  - iperf
+  - nmap
+  - ssh-copy-id
+  - tmux
+  - watch
+  - wget
+  - git
+
+homebrew_cask_apps:
+  - google-chrome
+  - transmit
+  - tower
+  - vmware-fusion
+  - iterm2
+
+homebrew_cask_appdir: "/Applications"
+
+homebrew_caskroom: "/usr/local/etc/Caskroom"
