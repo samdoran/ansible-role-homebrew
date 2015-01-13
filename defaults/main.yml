@@ -6,8 +6,6 @@ homebrew_packages:
   - fish
   - htop
   - coreutils
-  - iperf
-  - nmap
   - ssh-copy-id
   - tmux
   - watch
