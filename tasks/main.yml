@@ -8,7 +8,7 @@
   pause:
     prompt: "Login to complete the installation of the Xcode comamnd line tools. Press Enter when logged in"
   when: not xcode_cl_tools.stat.exists
-  tags: [ 'osx' , 'xcode' , 'homebrew' ]
+  tags: [ 'osx' , 'xcode' , 'homebrew' , 'prompt' ]
 
 - name: Install Xcode command line tools
   command: xcode-select --install
@@ -30,6 +30,12 @@
   sudo: no
   tags: [ 'osx' , 'homebrew' ]
 
+- name: Install Homebrew taps
+  homebrew_tap: tap={{ item }} state=present
+  with_items: homebrew_taps
+  sudo: no
+  tags: [ 'osx' , 'homebrew', 'packages' , 'cask' ]
+
 - name: Install Homebrew packages
   homebrew:
     update_homebrew: yes
@@ -37,18 +43,15 @@
     state: latest
   sudo: no
   with_items: homebrew_packages
+  ignore_errors: yes
   tags: [ 'osx' , 'homebrew', 'packages' ]
-
-- name: Install Homebrew taps
-  homebrew_tap: tap={{ item }} state=present
-  with_items: homebrew_taps
-  tags: [ 'osx' , 'homebrew', 'packages' , 'cask' ]
 
 - name: Install Homebrew Cask apps
   homebrew_cask:
     name: "{{ item }}"
     state: present
   with_items: homebrew_cask_apps
+  ignore_errors: yes
   environment:
     HOMEBREW_CASK_OPTS: "--appdir={{ homebrew_cask_appdir }} --caskroom={{ homebrew_caskroom }}"
   tags: [ 'osx' , 'homebrew', 'packages' , 'cask' ]
