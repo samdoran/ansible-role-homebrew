@@ -5,70 +5,70 @@ homebrew_taps:
 homebrew_packages:
   - ansible
   - brew-cask
-  # - exiftool
-  # - fish
-  # - git
-  # - hping
-  # - htop-osx
-  # - iperf
-  # - john-jumbo
-  # - media-info
-  # - minicom
-  # - mobile-shell
-  # - nmap
-  # - openssl
-  # - python
-  # - rbenv
-  # - rbenv-gem-rehash
-  # - ruby-build
-  # - ssh-copy-id
-  # - testdisk
-  # - tmux
-  # - tree
-  # - watch
-  # - wget
-  # - wireshark
-  # - yajl
+  - exiftool
+  - fish
+  - git
+  - hping
+  - htop-osx
+  - iperf
+  - john-jumbo
+  - media-info
+  - minicom
+  - mobile-shell
+  - nmap
+  - openssl
+  - python
+  - rbenv
+  - rbenv-gem-rehash
+  - ruby-build
+  - ssh-copy-id
+  - testdisk
+  - tmux
+  - tree
+  - watch
+  - wget
+  - wireshark
+  - yajl
 
 homebrew_cask_apps:
   - a-better-finder-rename
-  # - adium
-  # - appzapper
-  # - autodmg
-  # - bartender
-  # - bonjour-browser
-  # - caffeine
-  # - fantastical
-  # - firefox
-  # - fwbuilder
-  # - geektool
-  # - google-chrome
-  # - hazel
-  # - imageoptim
-  # - istat-menus
-  # - iterm2
-  # - java
-  # - kaleidoscope
-  # - keyboard-maestro
-  # - launchbar
-  # - lingon-x
-  # - marked
-  # - omnifocus
-  # - omnioutliner
-  # - packages
-  # - razer-synapse
-  # - remote-desktop-connection
-  # - screens-connect
-  # - skype
-  # - superduper
-  # - textexpander
-  # - tower
-  # - transmit
-  # - vagrant
-  # - virtualbox
-  # - vmware-fusion
-  # - xscope
-  # - ynab
+  - adium
+  - appzapper
+  - autodmg
+  - bartender
+  - bonjour-browser
+  - caffeine
+  - fantastical
+  - firefox
+  - fwbuilder
+  - geektool
+  - google-chrome
+  - hazel
+  - imageoptim
+  - istat-menus
+  - iterm2
+  - java
+  - kaleidoscope
+  - keyboard-maestro
+  - launchbar
+  - lingon-x
+  - marked
+  - omnifocus
+  - omnioutliner
+  - packages
+  - razer-synapse
+  - remote-desktop-connection
+  - screens-connect
+  - skype
+  - superduper
+  - textexpander
+  - tower
+  - transmit
+  - vagrant
+  - virtualbox
+  - vmware-fusion
+  - xscope
+  - ynab
 
 homebrew_cask_appdir: "/Applications"
 
