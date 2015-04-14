@@ -38,6 +38,7 @@ homebrew_cask_apps:
   - bartender
   - bonjour-browser
   - caffeine
+  - dropbox
   - fantastical
   - firefox
   - fwbuilder
