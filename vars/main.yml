@@ -6,6 +6,7 @@ homebrew_packages:
   - ansible
   - brew-cask
   - exiftool
+  - ffmpeg
   - fish
   - git
   - hping
@@ -47,6 +48,8 @@ homebrew_cask_apps:
   - geektool
   - google-chrome
   - hazel
+  - handbrake
+  - handbrakecli
   - imageoptim
   - istat-menus
   - iterm2
