@@ -6,7 +6,8 @@ homebrew_packages:
   - ansible
   - brew-cask
   - exiftool
-  - ffmpeg
+  - name: ffmpeg
+    options: '--with-faac --with-fdk-aac'
   - fish
   - git
   - hping
@@ -15,6 +16,9 @@ homebrew_packages:
   - john-jumbo
   - media-info
   - minicom
+  - mkvtoolnix
+  - mp4v2
+  - mplayer
   - mobile-shell
   - nmap
   - openssl
