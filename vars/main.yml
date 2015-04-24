@@ -50,6 +50,7 @@ homebrew_cask_apps:
   - hazel
   - handbrake
   - handbrakecli
+  - iexplorer
   - imageoptim
   - istat-menus
   - iterm2
@@ -58,6 +59,7 @@ homebrew_cask_apps:
   - keyboard-maestro
   - launchbar
   - lingon-x
+  - mactubes
   - marked
   - omnifocus
   - omnioutliner
@@ -69,10 +71,14 @@ homebrew_cask_apps:
   - superduper
   - textexpander
   - tower
+  - transcode-video
+  - transmission
   - transmit
   - vagrant
   - virtualbox
+  - vlc
   - vmware-fusion
+  - wacom-tablet
   - xscope
   - ynab
 
