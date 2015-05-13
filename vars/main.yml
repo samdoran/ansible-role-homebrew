@@ -68,6 +68,15 @@ homebrew_cask_apps:
   - omnifocus
   - omnioutliner
   - packages
+  - qlmarkdown
+  - qlcolorcode
+  - qlstephen
+  - betterzipql
+  - qlimagesize
+  - suspicious-package
+  - quicklook-json
+  - qlprettypatch
+  - quicklook-csv
   - razer-synapse
   - remote-desktop-connection
   - screens-connect
