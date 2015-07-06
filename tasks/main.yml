@@ -53,6 +53,7 @@
     state: present
   with_items: homebrew_cask_apps
   ignore_errors: yes
+  sudo: no
   environment:
     HOMEBREW_CASK_OPTS: "--appdir={{ homebrew_cask_appdir }} --caskroom={{ homebrew_caskroom }}"
   tags: [ 'osx' , 'homebrew', 'packages' , 'cask' ]
