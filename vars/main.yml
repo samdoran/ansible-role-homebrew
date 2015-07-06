@@ -22,6 +22,7 @@ homebrew_packages:
   - mobile-shell
   - nmap
   - openssl
+  - packer
   - python
   - name: rbenv
     state: head
