@@ -45,6 +45,7 @@ homebrew_cask_apps:
   - backblaze
   - bartender
   - bonjour-browser
+  - boot2docker
   - caffeine
   - dropbox
   - fantastical
