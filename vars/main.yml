@@ -85,7 +85,6 @@ homebrew_cask_apps:
   - superduper
   - textexpander
   - tower
-  - transcode-video
   - transmission
   - transmit
   - vagrant
