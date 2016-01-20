@@ -5,6 +5,9 @@ homebrew_taps:
 homebrew_packages:
   - ansible
   - brew-cask
+  - docker
+  - docker-compose
+  - docker-machine
   - exiftool
   - name: ffmpeg
     options: '--with-faac --with-fdk-aac'
@@ -40,13 +43,12 @@ homebrew_packages:
 homebrew_cask_apps:
   - a-better-finder-rename
   - adium
+  - airy
   - appzapper
   - autodmg
   - backblaze
   - bartender
   - bonjour-browser
-  - boot2docker
-  - caffeine
   - dropbox
   - fantastical
   - firefox
@@ -65,7 +67,6 @@ homebrew_cask_apps:
   - keyboard-maestro
   - launchbar
   - lingon-x
-  - mactubes
   - marked
   - omnifocus
   - omnioutliner
@@ -79,7 +80,6 @@ homebrew_cask_apps:
   - quicklook-json
   - qlprettypatch
   - quicklook-csv
-  - razer-synapse
   - remote-desktop-connection
   - screens-connect
   - skype
@@ -94,7 +94,6 @@ homebrew_cask_apps:
   - vmware-fusion
   - wacom-tablet
   - xscope
-  - ynab
 
 homebrew_cask_appdir: "/Applications"
 
