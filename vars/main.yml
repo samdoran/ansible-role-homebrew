@@ -41,6 +41,7 @@ homebrew_packages:
   - yajl
 
 homebrew_cask_apps:
+  - 1password
   - a-better-finder-rename
   - adium
   - airy
@@ -49,6 +50,8 @@ homebrew_cask_apps:
   - backblaze
   - bartender
   - bonjour-browser
+  - box-sync
+  - box-edit
   - dropbox
   - fantastical
   - firefox
@@ -80,7 +83,6 @@ homebrew_cask_apps:
   - quicklook-json
   - qlprettypatch
   - quicklook-csv
-  - remote-desktop-connection
   - screens-connect
   - skype
   - superduper
