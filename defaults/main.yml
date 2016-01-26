@@ -1,6 +1,9 @@
 ---
-homebrew_taps:
-  - caskroom/cask
+# Homebrew Cask is now included with Homebrew and no longer needs to be
+# installed as a separate Tap
+
+# homebrew_taps:
+#   - caskroom/cask
 
 # You may specify 'install_options' and 'state' that will be passed
 # to the homebrew module. If you specify either of these options,
