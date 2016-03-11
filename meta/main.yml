@@ -1,10 +1,10 @@
 ---
 galaxy_info:
   author: Sam Doran
-  description: "Install Homebrew"
+  description: "Install Homebrew, the missing package manager for OS X."
   company:
   license: MIT
-  min_ansible_version: 1.6
+  min_ansible_version: 1.9
 
   platforms:
   - name: GenericUNIX
@@ -12,7 +12,7 @@ galaxy_info:
       - all
       - any
 
-  categories:
+  galaxy_tags:
     - development
     - packaging
     - system
