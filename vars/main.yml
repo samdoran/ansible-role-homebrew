@@ -1,10 +1,9 @@
 ---
 homebrew_taps:
-  - caskroom/cask
+  - homebrew/versions
 
 homebrew_packages:
   - ansible
-  - brew-cask
   - docker
   - docker-compose
   - docker-machine
@@ -51,8 +50,6 @@ homebrew_cask_apps:
   - backblaze
   - bartender
   - bonjour-browser
-  - box-sync
-  - box-edit
   - dropbox
   - fantastical
   - firefox
@@ -74,6 +71,7 @@ homebrew_cask_apps:
   - marked
   - omnifocus
   - omnioutliner
+  - omnigraffle
   - packages
   - qlmarkdown
   - qlcolorcode
@@ -86,12 +84,10 @@ homebrew_cask_apps:
   - quicklook-csv
   - screens-connect
   - skype
-  - sublime-text
   - superduper
   - textexpander
   - tower
   - transmission
-  - transmit
   - vagrant
   - virtualbox
   - vlc
