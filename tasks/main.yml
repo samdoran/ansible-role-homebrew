@@ -47,7 +47,7 @@
 
 - name: Install Homebrew taps
   homebrew_tap: tap={{ item }} state=present
-  with_items: homebrew_taps
+  with_items: "{{ homebrew_taps }}"
   sudo: no
   when: homebrew_taps is defined
   tags:
@@ -63,7 +63,7 @@
     state: "{{ item.state | default('latest') }}"
     install_options: "{{ item.install_options | default('') }}"
   sudo: no
-  with_items: homebrew_packages
+  with_items: "{{ homebrew_packages }}"
   ignore_errors: yes
   tags:
     - osx
@@ -74,7 +74,7 @@
   homebrew_cask:
     name: "{{ item }}"
     state: present
-  with_items: homebrew_cask_apps
+  with_items: "{{ homebrew_cask_apps }}"
   ignore_errors: yes
   sudo: no
   environment:
