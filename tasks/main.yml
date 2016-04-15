@@ -40,7 +40,7 @@
   shell: 'echo "\r" | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
   args:
     creates: "/usr/local/bin/brew"
-  sudo: no
+  become: no
   tags:
     - osx
     - homebrew
@@ -48,7 +48,7 @@
 - name: Install Homebrew taps
   homebrew_tap: tap={{ item }} state=present
   with_items: "{{ homebrew_taps }}"
-  sudo: no
+  become: no
   when: homebrew_taps is defined
   tags:
     - osx
@@ -62,7 +62,7 @@
     name: "{{ item.name | default(item) }}"
     state: "{{ item.state | default('latest') }}"
     install_options: "{{ item.install_options | default('') }}"
-  sudo: no
+  become: no
   with_items: "{{ homebrew_packages }}"
   ignore_errors: yes
   tags:
@@ -76,7 +76,7 @@
     state: present
   with_items: "{{ homebrew_cask_apps }}"
   ignore_errors: yes
-  sudo: no
+  become: no
   environment:
     HOMEBREW_CASK_OPTS: "--appdir={{ homebrew_cask_appdir }} --caskroom={{ homebrew_caskroom }}"
   tags:
