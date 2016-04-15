@@ -2,40 +2,59 @@
 - name: Check for Xcode Command Line Tools
   stat: path=/Library/Developer/CommandLineTools
   register: xcode_cl_tools
-  tags: [ 'osx' , 'xcode' , 'homebrew' ]
+  tags:
+    - osx
+    - xcode
+    - homebrew
 
 - name: Login to continue
   pause:
     prompt: "Login to complete the installation of the Xcode comamnd line tools. Press Enter when logged in"
   when: not xcode_cl_tools.stat.exists
-  tags: [ 'osx' , 'xcode' , 'homebrew' , 'prompt' ]
+  tags:
+    - osx
+    - xcode
+    - homebrew
+    - prompt
 
 - name: Install Xcode command line tools
   command: xcode-select --install
   args:
     creates: "/Library/Developer/CommandLineTools"
-  tags: [ 'osx' , 'xcode' , 'homebrew' ]
+  tags:
+    - osx
+    - xcode
+    - homebrew
 
 - name: Wait until command line tools are installed
   wait_for:
     path: "/private/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
     timeout: 600
     state: absent
-  tags: [ 'osx' , 'xcode' , 'homebrew' ]
+  tags:
+    - osx
+    - xcode
+    - homebrew
 
 - name: Install Homebrew
   shell: 'echo "\r" | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
   args:
     creates: "/usr/local/bin/brew"
   sudo: no
-  tags: [ 'osx' , 'homebrew' ]
+  tags:
+    - osx
+    - homebrew
 
 - name: Install Homebrew taps
   homebrew_tap: tap={{ item }} state=present
   with_items: homebrew_taps
   sudo: no
   when: homebrew_taps is defined
-  tags: [ 'osx' , 'homebrew', 'packages' , 'cask' ]
+  tags:
+    - osx
+    - homebrew
+    - packages
+    - cask
 
 - name: Install Homebrew packages
   homebrew:
@@ -46,7 +65,10 @@
   sudo: no
   with_items: homebrew_packages
   ignore_errors: yes
-  tags: [ 'osx' , 'homebrew', 'packages' ]
+  tags:
+    - osx
+    - homebrew
+    - packages
 
 - name: Install Homebrew Cask apps
   homebrew_cask:
@@ -57,5 +79,9 @@
   sudo: no
   environment:
     HOMEBREW_CASK_OPTS: "--appdir={{ homebrew_cask_appdir }} --caskroom={{ homebrew_caskroom }}"
-  tags: [ 'osx' , 'homebrew', 'packages' , 'cask' ]
+  tags:
+    - osx
+    - homebrew
+    - packages
+    - cask
 
