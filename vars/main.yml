@@ -1,9 +1,7 @@
----
 homebrew_taps:
   - homebrew/versions
 
 homebrew_packages:
-  - ansible
   - docker
   - docker-compose
   - docker-machine
@@ -53,14 +51,11 @@ homebrew_cask_apps:
   - dropbox
   - fantastical
   - firefox
-  - fwbuilder
   - geektool
   - google-chrome
   - hazel
   - handbrake
   - handbrakecli
-  - iexplorer
-  - imageoptim
   - istat-menus
   - iterm2
   - java
@@ -72,7 +67,6 @@ homebrew_cask_apps:
   - omnifocus
   - omnioutliner
   - omnigraffle
-  - packages
   - qlmarkdown
   - qlcolorcode
   - qlstephen
@@ -83,11 +77,9 @@ homebrew_cask_apps:
   - qlprettypatch
   - quicklook-csv
   - screens-connect
-  - skype
   - superduper
   - textexpander
   - tower
-  - transmission
   - vagrant
   - virtualbox
   - vlc
