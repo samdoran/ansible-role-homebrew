@@ -82,6 +82,7 @@ homebrew_cask_apps:
   - tower
   - vagrant
   - virtualbox
+  - virtualbox-extension-pack
   - vlc
   - vmware-fusion
   - wacom-tablet
