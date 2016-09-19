@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Sam Doran
-  description: "Install Homebrew, the missing package manager for OS X."
+  description: "Install Homebrew, the missing package manager for macOS."
   company:
   license: MIT
   min_ansible_version: 1.9
