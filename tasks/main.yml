@@ -1,6 +1,6 @@
----
 - name: Check for Xcode Command Line Tools
-  stat: path=/Library/Developer/CommandLineTools
+  stat:
+      path: /Library/Developer/CommandLineTools
   register: xcode_cl_tools
   tags:
     - osx
@@ -46,7 +46,9 @@
     - homebrew
 
 - name: Install Homebrew taps
-  homebrew_tap: tap={{ item }} state=present
+  homebrew_tap:
+    tap: "{{ item }}"
+    state: present
   with_items: "{{ homebrew_taps }}"
   become: no
   when: homebrew_taps is defined
