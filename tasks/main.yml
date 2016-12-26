@@ -1,6 +1,6 @@
 - name: Check for Xcode Command Line Tools
   stat:
-      path: /Library/Developer/CommandLineTools
+    path: /Library/Developer/CommandLineTools
   register: xcode_cl_tools
   tags:
     - osx
