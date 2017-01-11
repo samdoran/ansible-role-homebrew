@@ -64,6 +64,7 @@ homebrew_cask_apps:
   - keyboard-maestro
   - launchbar
   - lingon-x
+  - logitech-options
   - makemkv
   - marked
   - omnifocus
@@ -79,8 +80,11 @@ homebrew_cask_apps:
   - qlprettypatch
   - quicklook-csv
   - screens-connect
+  - slack
   - superduper
+  - taskpaper
   - textexpander
+  - textual
   - tower
   - vagrant
   - virtualbox
