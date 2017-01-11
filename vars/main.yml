@@ -28,7 +28,6 @@ homebrew_packages:
   - python
   - name: rbenv
     state: head
-  - rbenv-gem-rehash
   - ruby-build
   - ssh-copy-id
   - testdisk
@@ -64,6 +63,7 @@ homebrew_cask_apps:
   - keyboard-maestro
   - launchbar
   - lingon-x
+  - makemkv
   - marked
   - omnifocus
   - omnioutliner
@@ -86,7 +86,7 @@ homebrew_cask_apps:
   - virtualbox-extension-pack
   - vlc
   - vmware-fusion
-  - wacom-tablet
+  - wacom-intuos-pro-tablet
   - xscope
 
 homebrew_cask_appdir: "/Applications"
