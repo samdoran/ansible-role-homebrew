@@ -15,7 +15,6 @@ homebrew_packages:
   - htop-osx
   - iperf
   - john-jumbo
-  - makemkv
   - media-info
   - minicom
   - mkvtoolnix
@@ -42,6 +41,7 @@ homebrew_cask_apps:
   - 1password
   - a-better-finder-rename
   - adium
+  - aerial
   - airparrot
   - airy
   - appzapper
@@ -49,6 +49,7 @@ homebrew_cask_apps:
   - backblaze
   - bartender
   - bonjour-browser
+  - cloak
   - dropbox
   - fantastical
   - firefox
