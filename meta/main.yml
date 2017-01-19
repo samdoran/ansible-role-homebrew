@@ -4,7 +4,7 @@ galaxy_info:
   description: "Install Homebrew, the missing package manager for macOS."
   company:
   license: MIT
-  min_ansible_version: 1.9
+  min_ansible_version: 2.2
 
   platforms:
   - name: GenericUNIX

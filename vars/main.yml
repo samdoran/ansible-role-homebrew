@@ -1,10 +1,11 @@
+homebrew_cask_appdir: "/Applications"
+homebrew_caskroom: "/usr/local/Caskroom"
+
 homebrew_taps:
   - homebrew/versions
+  - homebrew/completions
 
 homebrew_packages:
-  - docker
-  - docker-compose
-  - docker-machine
   - exiftool
   - name: ffmpeg
     options: '--with-faac --with-fdk-aac'
@@ -15,6 +16,7 @@ homebrew_packages:
   - htop-osx
   - iperf
   - john-jumbo
+  - jid
   - media-info
   - minicom
   - mkvtoolnix
@@ -50,6 +52,7 @@ homebrew_cask_apps:
   - bartender
   - bonjour-browser
   - cloak
+  - docker
   - dropbox
   - fantastical
   - firefox
@@ -93,7 +96,3 @@ homebrew_cask_apps:
   - vmware-fusion
   - wacom-intuos-pro-tablet
   - xscope
-
-homebrew_cask_appdir: "/Applications"
-
-homebrew_caskroom: "/usr/local/Caskroom"

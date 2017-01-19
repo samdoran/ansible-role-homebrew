@@ -1,6 +1,4 @@
----
-# Homebrew Cask is now included with Homebrew and no longer needs to be
-# installed as a separate Tap
+## Homebrew
 
 # homebrew_taps:
 #   - caskroom/cask
@@ -13,7 +11,6 @@
 #   options: 'some options here'
 #
 homebrew_packages:
-  - fish
   - htop
   - coreutils
   - ssh-copy-id
@@ -22,9 +19,11 @@ homebrew_packages:
   - wget
   - git
 
-homebrew_cask_apps:
-  - google-chrome
+
+# Homebrew Cask
 
 homebrew_cask_appdir: "~/Applications"
-
 homebrew_caskroom: "/opt/homebrew-cask/Caskroom"
+
+homebrew_cask_apps:
+  - google-chrome
