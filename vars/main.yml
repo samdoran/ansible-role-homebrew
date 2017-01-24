@@ -6,34 +6,40 @@ homebrew_taps:
   - homebrew/completions
 
 homebrew_packages:
+  - docker-completion
   - exiftool
+  - fish
   - name: ffmpeg
     options: '--with-faac --with-fdk-aac'
-  - fish
+  - gem-completion
   - git
   - handbrake
   - hping
   - htop-osx
   - iperf
-  - john-jumbo
   - jid
+  - john-jumbo
+  - launchctl-completion
   - media-info
   - minicom
   - mkvtoolnix
+  - mobile-shell
   - mp4v2
   - mplayer
-  - mobile-shell
   - nmap
   - openssl
-  - packer
-  - python
   - name: rbenv
     state: head
+  - packer
+  - packer-completion
+  - pip-completion
+  - python
   - ruby-build
   - ssh-copy-id
   - testdisk
   - tmux
   - tree
+  - vagrant-completion
   - watch
   - wget
   - wireshark
