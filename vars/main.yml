@@ -20,6 +20,7 @@ homebrew_packages:
   - jid
   - john-jumbo
   - launchctl-completion
+  - mackup
   - media-info
   - minicom
   - mkvtoolnix
