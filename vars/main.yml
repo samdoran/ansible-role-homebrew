@@ -43,7 +43,8 @@ homebrew_packages:
   - vagrant-completion
   - watch
   - wget
-  - wireshark
+  - name: wireshark
+    options: '--with-qt'
   - yajl
   - 'https://git.io/sshpass.rb'
 
@@ -52,14 +53,12 @@ homebrew_cask_apps:
   - a-better-finder-rename
   - adium
   - aerial
-  - airparrot
   - airy
   - appzapper
   - autodmg
   - backblaze
   - bartender
   - bonjour-browser
-  - cloak
   - docker
   - dropbox
   - fantastical
@@ -102,5 +101,6 @@ homebrew_cask_apps:
   - virtualbox-extension-pack
   - vlc
   - vmware-fusion
+  - vyprvpn
   - wacom-intuos-pro-tablet
   - xscope
