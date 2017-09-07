@@ -50,6 +50,7 @@ homebrew_packages:
 
 homebrew_cask_apps:
   - 1password
+  - 1password-cli
   - a-better-finder-rename
   - adium
   - aerial
