@@ -3,7 +3,7 @@
     path: /Library/Developer/CommandLineTools
   register: xcode_cl_tools
   tags:
-    - osx
+    - macos
     - xcode
     - homebrew
 
@@ -12,7 +12,7 @@
     prompt: "Login to complete the installation of the Xcode comamnd line tools. Press Enter when logged in"
   when: not xcode_cl_tools.stat.exists
   tags:
-    - osx
+    - macos
     - xcode
     - homebrew
     - prompt
@@ -22,7 +22,7 @@
   args:
     creates: "/Library/Developer/CommandLineTools"
   tags:
-    - osx
+    - macos
     - xcode
     - homebrew
 
@@ -32,7 +32,7 @@
     timeout: 600
     state: absent
   tags:
-    - osx
+    - macos
     - xcode
     - homebrew
 
@@ -42,7 +42,7 @@
     creates: "/usr/local/bin/brew"
   become: no
   tags:
-    - osx
+    - macos
     - homebrew
 
 - name: Install Homebrew taps
@@ -52,7 +52,7 @@
   with_items: "{{ homebrew_taps | default([]) }}"
   become: no
   tags:
-    - osx
+    - macos
     - homebrew
     - packages
     - cask
@@ -67,7 +67,7 @@
   with_items: "{{ homebrew_packages }}"
   ignore_errors: yes
   tags:
-    - osx
+    - macos
     - homebrew
     - packages
 
@@ -80,7 +80,7 @@
   ignore_errors: yes
   become: no
   tags:
-    - osx
+    - macos
     - homebrew
     - packages
     - cask

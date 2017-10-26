@@ -24,7 +24,7 @@ Example Playbook
 
     - hosts: localhost
       roles:
-         - role: sdoran.homebrew
+         - role: samdoran.homebrew
            homebrew_cask_appdir: "/Applications"
 
 License
