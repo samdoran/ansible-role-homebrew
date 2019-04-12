@@ -14,9 +14,6 @@ Role Variables
 |-------------------|---------------------|----------------------|
 | `homebrew_taps` | `[undefined]` | List of Homebrew taps to add |
 | `homebrew_packages` | `[see defaults/main.yml]` | List of Homebrew packages to install |
-| `homebrew_cask_apps` | `[see defaults/main.yml]` | List of Homebrew Cask apps to install |
-| `homebrew_cask_appdir` | `~/Applications` | Directory where Cask applications are installed |
-| `homebrew_caskroom` | `/opt/homebrew-cask/Caskroom` | Where Cask applications will be stored. |
 
 Example Playbook
 ----------------
@@ -30,4 +27,4 @@ Example Playbook
 License
 -------
 
-MIT
+Apache 2.0

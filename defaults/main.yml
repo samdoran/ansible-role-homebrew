@@ -20,10 +20,5 @@ homebrew_packages:
   - git
 
 
-# Homebrew Cask
-
-homebrew_cask_appdir: "~/Applications"
-homebrew_caskroom: "/opt/homebrew-cask/Caskroom"
-
 homebrew_cask_apps:
   - google-chrome
