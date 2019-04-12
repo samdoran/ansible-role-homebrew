@@ -49,7 +49,7 @@
   homebrew_tap:
     tap: "{{ item }}"
     state: present
-  with_items: "{{ homebrew_taps | default([]) }}"
+  loop: "{{ homebrew_taps | default([]) }}"
   become: no
   tags:
     - macos
@@ -64,7 +64,7 @@
     state: "{{ item.state | default('latest') }}"
     install_options: "{{ item.install_options | default(omit) }}"
   become: no
-  with_items: "{{ homebrew_packages }}"
+  loop: "{{ homebrew_packages }}"
   ignore_errors: yes
   tags:
     - macos
@@ -76,7 +76,7 @@
     name: "{{ item }}"
     state: present
     install_options: "appdir={{ homebrew_cask_appdir }},caskroom={{ homebrew_caskroom }}"
-  with_items: "{{ homebrew_cask_apps }}"
+  loop: "{{ homebrew_cask_apps }}"
   ignore_errors: yes
   become: no
   tags:
