@@ -12,8 +12,9 @@ Role Variables
 --------------
 | Name              | Default Value       | Description          |
 |-------------------|---------------------|----------------------|
-| `homebrew_taps` | `[undefined]` | List of Homebrew taps to add |
-| `homebrew_packages` | `[see defaults/main.yml]` | List of Homebrew packages to install |
+| `homebrew_taps` | `['homebrew/cask-drivers']` | List of Homebrew taps to add |
+| `homebrew_packages` | `[]` | List of Homebrew packages to install |
+| `homebrew_cask_apps` | `[]` | List of Homebrew Cask apps to install |
 
 Example Playbook
 ----------------
@@ -21,8 +22,8 @@ Example Playbook
 
     - hosts: localhost
       roles:
-         - role: samdoran.homebrew
-           homebrew_cask_appdir: "/Applications"
+         - samdoran.homebrew
+
 
 License
 -------
