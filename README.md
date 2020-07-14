@@ -1,7 +1,7 @@
 Homebrew
 =========
 
-Install Xcode command line tools, Homebrew command line tools, and Homebrew Cask GUI apps.
+Install Xcode command line tools, Homebrew, Homebrew command line tools, and Homebrew Cask GUI apps.
 
 Requirements
 ------------

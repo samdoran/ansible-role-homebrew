@@ -7,43 +7,45 @@
     - xcode
     - homebrew
 
-- name: Login to continue
-  pause:
-    prompt: "Login to complete the installation of the Xcode comamnd line tools. Press Enter when logged in"
+- name: Install command line tools
   when: not xcode_cl_tools.stat.exists
-  tags:
-    - macos
-    - xcode
-    - homebrew
-    - prompt
+  block:
+    - name: Create hidden install file
+      file:
+        path: /private/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+        state: touch
+      tags:
+        - macos
+        - xcode
+        - homebrew
 
-- name: Install Xcode command line tools
-  command: xcode-select --install
-  args:
-    creates: "/Library/Developer/CommandLineTools"
-  tags:
-    - macos
-    - xcode
-    - homebrew
+    - name: List updates
+      command: softwareupdate -l
+      register: updates
+      changed_when: no
+      tags:
+        - macos
+        - xcode
+        - homebrew
 
-- name: Wait until command line tools are installed
-  wait_for:
-    path: "/private/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
-    timeout: 600
-    state: absent
-  tags:
-    - macos
-    - xcode
-    - homebrew
+    - name: Install Xcode Command Line Tools
+      command: softwareupdate --install "{{ package_name }}"
+      args:
+        creates: /Library/Developer/CommandLineTools
+      vars:
+        package_name: "{{ updates.stdout | regex_search('Command Line Tools for Xcode-.*', multiline=True) }}"
+      tags:
+        - macos
+        - xcode
+        - homebrew
 
-- name: Install Homebrew
-  shell: 'echo "\r" | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
-  args:
-    creates: "/usr/local/bin/brew"
-  become: no
-  tags:
-    - macos
-    - homebrew
+  always:
+    - name: Remove hidden install file
+      file:
+        path: /private/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+        state: absent
+      tags:
+        - guest_devtools
 
 - name: Install Homebrew taps
   homebrew_tap:
