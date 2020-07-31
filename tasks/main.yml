@@ -47,6 +47,16 @@
       tags:
         - guest_devtools
 
+- name: Install Homebrew
+  shell: 'echo "\r" | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+  args:
+    creates: "/usr/local/bin/brew"
+  become: no
+  tags:
+    - macos
+    - homebrew
+
+
 - name: Install Homebrew taps
   homebrew_tap:
     tap: "{{ item }}"
