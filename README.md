@@ -1,10 +1,10 @@
 This role has moved to the collection [samdoran.macos](https://github.com/samdoran/ansible-collection-macos).
 
-To switch to the collection, install the collection:
+To switch to the collection, first install it:
 
     ansible-galaxy collection install samdoran.macos
 
-Then update tasks to use the fully qualified collection name:
+Then update playbooks to use the fully qualified collection name:
 
 ```yaml
 roles:
