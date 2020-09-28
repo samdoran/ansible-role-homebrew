@@ -1,31 +1,12 @@
-Homebrew
-=========
+This role has moved to the collection [samdoran.macos](https://github.com/samdoran/ansible-collection-macos).
 
-Install Xcode command line tools, Homebrew, Homebrew command line tools, and Homebrew Cask GUI apps.
+To switch to the collection, install the collection:
 
-Requirements
-------------
+    ansible-galaxy collection install samdoran.macos
 
-- Ansible installed
+Then update tasks to use the fully qualified collection name:
 
-Role Variables
---------------
-| Name              | Default Value       | Description          |
-|-------------------|---------------------|----------------------|
-| `homebrew_taps` | `['homebrew/cask-drivers']` | List of Homebrew taps to add |
-| `homebrew_packages` | `[]` | List of Homebrew packages to install |
-| `homebrew_cask_apps` | `[]` | List of Homebrew Cask apps to install |
-
-Example Playbook
-----------------
-
-
-    - hosts: localhost
-      roles:
-         - samdoran.homebrew
-
-
-License
--------
-
-Apache 2.0
+```yaml
+roles:
+  - samdoran.macos.homebrew
+```
